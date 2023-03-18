@@ -1,0 +1,37 @@
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/georgia.ttf') format('truetype');
+  }
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Georgia';
+    font-style: italic;
+    font-weight: bold;
+    src: url('assets/fonts/georgia_bolditalic.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/arialmt.ttf') format('truetype');
+  }
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: bold;
+    src: url('assets/fonts/arial_bolditalicmt.ttf') format('truetype');
+  }
+
+  
+  
+  
+  
+  
