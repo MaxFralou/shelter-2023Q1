@@ -48,13 +48,13 @@ html {
 body {
   margin: 0;
   font-family: 'Georgia', 'Arial';
+  background: url("./assets/img/noise_lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 /* HEADER START */
 
 .header {
   width: 100%;
-  background: url("./assets/img/noise_lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .container-header {
@@ -130,4 +130,98 @@ body {
   text-decoration-color: #F1CDB3;
   text-decoration-thickness: 3px;
   text-underline-offset: 20%;
+}
+
+/* NOT-ONLY */
+
+.container-not-only {
+  max-width: 1280px;
+  height: 51em;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-image: url(./assets/img/not-only-pic.png);
+  background-repeat: no-repeat;
+  background-position: right 40px top 100%;
+}
+
+.content-not-only {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 18.5%;
+  margin-right: 61%;
+}
+
+.main-title {
+  margin: 0;
+  padding-right: 13%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.desc {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+  margin: 0;
+  padding-top: 8.4%;
+  padding-left: 1.1%;
+}
+
+.button-not-only {
+  width: 207px;
+  height: 52px;
+  border-radius: 100px;
+  font-family: 'Georgia';
+  margin-top: 9%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background: #F1CDB3;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button-not-only:hover {
+  background: #FDDCC4;
+}
+
+
+
+
+
+/* ABOUT */
+.about {
+  background: #FFFFFF;
+}
+
+.about-title {
+  margin: 0;
+}
+
+.desc-about-2 {
+  margin: 0;
+}
+
+
+
+/* OUR_FRIENDS */
+.our-friends {
+  background: #F6F6F6;
+}
+
+.our-friends-title {
+  margin: 0;
 }
