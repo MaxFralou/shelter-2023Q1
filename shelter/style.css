@@ -34,6 +34,15 @@
   src: url('assets/fonts/arial_bolditalicmt.ttf') format('truetype');
 }
 
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  src: url('assets/fonts/arial-italic.ttf') format('truetype');
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -157,7 +166,7 @@ body {
 .content-not-only {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 18.5%;
   margin-right: 61%;
 }
@@ -228,7 +237,7 @@ body {
 .content-about {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 5.2%;
   margin-left: 49.6%;
 }
@@ -302,7 +311,7 @@ body {
 .slider-our-friends {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 12px;
   margin: 0;
   padding-top: 2.5%;
@@ -338,7 +347,7 @@ body {
 }
 
 .pets-card:hover {
-  scale: 1.01;
+  scale: 1.2;
 }
 
 .pets-card:hover .button-friends {
@@ -440,7 +449,7 @@ body {
   padding-right: 3%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .help-title {
@@ -458,7 +467,7 @@ body {
 .list-help-first-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-left: 1px;
   margin-top: 1.5em;
   column-gap: 5.8em;
@@ -572,3 +581,92 @@ body {
   margin-left: -20px;
 }
 
+/* IN-ADDITION */
+
+.in-addition {
+  background: #F6F6F6;
+}
+
+.container-in-addition {
+  max-width: 1280px;
+  height: 28.5em;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-image: url(./assets/img/iIn-addition-pic.png);
+  background-repeat: no-repeat;
+  background-position: left 182px top 45%;
+}
+
+.content-in-addition {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.8%;
+  padding-left: 56.5%;
+}
+
+.in-addition-title {
+  margin: 0;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.in-addition-sutitle {
+  margin-top: 5.3%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+
+}
+
+.credit-card {
+  width: 95%;
+  height: 2.1em;
+  margin-top: 5px;
+  padding-top: 8px;
+  padding-right: 15px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: end;
+  color: #545454;
+  background: #F1CDB3;
+  border-radius: 9px;
+  background-image: url(./assets/svg/credit-card.svg);
+  background-repeat: no-repeat;
+  background-position: left 14px top 44%;
+}
+
+.credit-card-link {
+  text-decoration: none;
+  color: #545454;
+  transition: all 0.5s;
+}
+
+.credit-card-link:hover {
+  filter: brightness(120%);
+}
+
+.in-addition-legal {
+  margin-top: 5%;
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #B2B2B2;
+}
