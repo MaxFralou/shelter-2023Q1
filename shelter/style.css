@@ -345,8 +345,6 @@ body {
   background: #FDDCC4;
 }
 
-
-
 .pet-name {
   padding-top: 3.5%;
   padding-left: 36.5%;
@@ -428,3 +426,149 @@ body {
 }
 
 /* HELP */
+
+.help {
+  background: #FFFFFF;
+}
+
+.container-help {
+  max-width: 1280px;
+  height: 38.5em;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.help-title {
+  margin-top: 4%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.list-help-first-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 1px;
+  margin-top: 1.5em;
+  column-gap: 5.8em;
+  padding-left: 4em;
+  list-style: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+
+.list-help-second-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.7%;
+  column-gap: 7em;
+  padding-left: 8em;
+  list-style: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+
+.item-help-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.help-card-pic {
+  width: 3em;
+}
+
+.help-card-desc {
+  margin-top: 1.6em;
+}
+
+.p1 {
+  margin-left: 18px;
+}
+
+.d1 {
+  margin-left: 6px;
+}
+
+.p2 {
+  margin-left: 50px;
+}
+
+.d2 {
+  margin-left: 2px;
+}
+
+.p3 {
+  margin-left: 5px;
+}
+
+.d3 {
+  margin-left: 11px;
+}
+
+.p4 {
+  margin-left: 51px;
+}
+
+.d4 {
+  margin-left: 6px;
+}
+
+.p5 {
+  margin-left: 23px;
+}
+
+.p6 {
+  margin-left: 27px;
+}
+
+.d6 {
+  margin-left: 12px;
+}
+
+.p7 {
+  margin-left: 1px;
+}
+
+.d7 {
+  margin-left: -20px;
+}
+
+.p8 {
+  margin-left: 32px;
+}
+
+.d8 {
+  margin-left: -20px;
+}
+
+.p9 {
+  margin-left: 21px;
+}
+
+.d9 {
+  margin-left: -20px;
+}
+
