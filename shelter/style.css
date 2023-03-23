@@ -120,6 +120,14 @@ body {
   transition: all 0.5s;
 }
 
+.list-item:first-child .list-item-link:first-child {
+  color: #FAFAFA;
+  text-decoration: underline;
+  text-decoration-color: #F1CDB3;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 20%;
+}
+
 .list-item-link:hover {
   color: #FAFAFA;
 }
@@ -309,13 +317,35 @@ body {
   background-image: url('./assets/svg/arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navigation-back:hover {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
+  background-image: url('./assets/svg/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .pets-card {
   margin: 16px 35px 0 39px;
   width: 17.2em;
   background: #FAFAFA;
+  cursor: pointer;
+  transition: all 0.5s;
 }
+
+.pets-card:hover {
+  scale: 1.01;
+}
+
+.pets-card:hover .button-friends {
+  background: #FDDCC4;
+}
+
+
 
 .pet-name {
   padding-top: 3.5%;
@@ -348,6 +378,8 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 .navigation-forward {
@@ -356,6 +388,16 @@ body {
   margin-top: 17.6%;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  background-image: url('./assets/svg/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navigation-forward:hover {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
   background-image: url('./assets/svg/arrow-right.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -376,6 +418,13 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button-friends-more:hover {
+  border: 2px solid #FDDCC4;
+  background: #FDDCC4;
 }
 
 /* HELP */
