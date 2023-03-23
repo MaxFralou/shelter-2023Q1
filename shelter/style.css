@@ -180,6 +180,7 @@ body {
 .button-not-only {
   width: 207px;
   height: 52px;
+  border: 2px solid #F1CDB3;
   border-radius: 100px;
   font-family: 'Georgia';
   margin-top: 9%;
@@ -206,14 +207,14 @@ body {
 
 .container-about {
   max-width: 1280px;
-  height: 30.5em;
+  height: 39.5em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
   padding-right: 3%;
   background-image: url(./assets/img/about-pic.png);
   background-repeat: no-repeat;
-  background-position: left 216px top 100%;
+  background-position: left 216px top 36%;
 }
 
 .content-about {
@@ -264,6 +265,117 @@ body {
   background: #F6F6F6;
 }
 
-.our-friends-title {
-  margin: 0;
+.container-our-friends {
+  max-width: 1280px;
+  height: 52em;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
+
+.our-friends-title {
+  width: 100%;
+  height: 3em;
+  margin: 0 0 0 0;
+  padding-top: 0.5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.slider-our-friends {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding-top: 2.5%;
+}
+
+.navigation-back {
+  width: 3.3em;
+  height: 3.2em;
+  margin-top: 17.6%;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background-image: url('./assets/svg/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pets-card {
+  margin: 16px 35px 0 39px;
+  width: 17.2em;
+  background: #FAFAFA;
+}
+
+.pet-name {
+  padding-top: 3.5%;
+  padding-left: 36.5%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.button-friends {
+  width: 187px;
+  height: 52px;
+  margin-top: 4%;
+  margin-left: 15.5%;
+  margin-bottom: 11%;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background: #FAFAFA;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.navigation-forward {
+  width: 3.3em;
+  height: 3.2em;
+  margin-top: 17.6%;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background-image: url('./assets/svg/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-friends-more {
+  width: 261px;
+  height: 52px;
+  margin-top: 4.9%;
+  margin-left: 39.2%;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background: #F1CDB3;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+/* HELP */
