@@ -235,16 +235,17 @@ body {
 }
 
 .content-about {
+  width: 85%;
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
   margin-top: 5.2%;
-  margin-left: 49.6%;
+
 }
 
 .about-title {
   margin: 0;
-  padding-right: 39%;
+  padding-left: 58.3%;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -255,8 +256,8 @@ body {
 }
 
 .desc-about-1 {
-  margin-top: 4%;
-  padding-right: 29%;
+  margin-top: 2.4%;
+  padding-left: 58.3%;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
@@ -266,8 +267,8 @@ body {
 }
 
 .desc-about-2 {
-  margin: 1.6% 0 0 0;
-  padding-right: 30%;
+  margin: 0.9% 0 0 0;
+  padding-left: 58.3%;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
@@ -283,6 +284,7 @@ body {
 }
 
 .container-our-friends {
+  position: relative;
   max-width: 1280px;
   height: 52em;
   margin: 0 auto;
@@ -308,11 +310,25 @@ body {
   color: #545454;
 }
 
+.navigation-container {
+  width: 95%;
+  top: 45.5%;
+  left: 3%;
+  /* padding-left: 38px; */
+  padding-right: 14px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+}
+
 .slider-our-friends {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   /* flex-wrap: wrap; */
-  gap: 12px;
+  /* gap: 12px; */
   margin: 0;
   padding-top: 2.5%;
 }
@@ -320,7 +336,7 @@ body {
 .navigation-back {
   width: 3.3em;
   height: 3.2em;
-  margin-top: 17.6%;
+  margin-top: 0.1%;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background-image: url('./assets/svg/arrow-left.svg');
@@ -339,7 +355,7 @@ body {
 }
 
 .pets-card {
-  margin: 16px 35px 0 39px;
+  margin: 16px 43px 0 43px;
   width: 17.2em;
   background: #FAFAFA;
   cursor: pointer;
@@ -392,7 +408,7 @@ body {
 .navigation-forward {
   width: 3.3em;
   height: 3.2em;
-  margin-top: 17.6%;
+  margin-top: 0.1%;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background-image: url('./assets/svg/arrow-right.svg');
@@ -464,10 +480,95 @@ body {
   color: #545454;
 }
 
-.list-help-first-row {
+.list-help-grid {
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+  grid-template-areas:
+    "l1 l1 l2 l2 l3 l3 l3 l4 l4 l5 l5"
+    " . l6 l6 l7 l7 l7 l8 l8 l9 l9 .";
+  column-gap: 1px;
+  row-gap: 59px;
+  margin-top: 32px;
+  list-style: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+  letter-spacing: 0.06em;
+}
+
+.l1 {
+  grid-area: l1;
+  padding-left: 18px;
+}
+
+.l2 {
+  grid-area: l2;
+  padding-left: 59px;
+}
+
+.l3 {
+  grid-area: l3;
+  padding-left: 0;
+}
+
+.l4 {
+  grid-area: l4;
+  padding-right: 48px;
+}
+
+.l5 {
+  grid-area: l5;
+  padding-right: 44px;
+}
+
+.l6 {
+  grid-area: l6;
+  padding-right: 17px;
+}
+
+.l7 {
+  grid-area: l7;
+  padding-right: 41px;
+}
+
+.l8 {
+  grid-area: l8;
+  padding-right: 47px;
+}
+
+.l9 {
+  grid-area: l9;
+  padding-right: 24px;
+}
+
+.item-help-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-right: 1%;
+}
+
+.help-card-pic {
+  margin-right: 1px;
+  margin-left: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  width: 3em;
+}
+
+.help-card-desc {
+  margin-top: 29px;
+}
+
+/* .list-help-first-row {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  
   margin-left: 1px;
   margin-top: 1.5em;
   column-gap: 5.8em;
@@ -480,9 +581,9 @@ body {
   line-height: 115%;
   color: #545454;
   letter-spacing: 0.06em;
-}
+} */
 
-.list-help-second-row {
+/* .list-help-second-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -497,8 +598,8 @@ body {
   line-height: 115%;
   color: #545454;
   letter-spacing: 0.06em;
-}
-
+} */
+/* 
 .item-help-card {
   display: flex;
   flex-direction: column;
@@ -511,9 +612,9 @@ body {
 
 .help-card-desc {
   margin-top: 1.6em;
-}
+} */
 
-.p1 {
+/* .p1 {
   margin-left: 18px;
 }
 
@@ -579,7 +680,7 @@ body {
 
 .d9 {
   margin-left: -20px;
-}
+} */
 
 /* IN-ADDITION */
 
@@ -589,7 +690,7 @@ body {
 
 .container-in-addition {
   max-width: 1280px;
-  height: 28.5em;
+  height: 28.6em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -669,4 +770,109 @@ body {
   font-size: 12px;
   line-height: 150%;
   color: #B2B2B2;
+}
+
+/* FOOTER */
+
+.footer {
+  background: url(./assets/img/noise_lines.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
+    #211F20;
+  ;
+}
+
+.container-footer {
+  max-width: 1280px;
+  height: 22em;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: row;
+  background-image: url(./assets/img/footer-pic.png);
+  background-repeat: no-repeat;
+  background-position: right 40px top 100%;
+}
+
+.contacts-footer {
+  width: 37%;
+}
+
+.contacts-title {
+  width: 69%;
+  margin-top: 5.8%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.style-footer {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.email {
+  width: 57%;
+  height: 2.2em;
+  margin: 9.6% 0 6% 0;
+  text-align: end;
+  background-image: url(./assets/svg/icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: left 2px top -26%;
+}
+
+.phone {
+  width: 54%;
+  height: 2.2em;
+  text-align: end;
+  padding-top: 0.6%;
+  background-image: url(./assets/svg/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: left 2px top 0%;
+}
+
+.location-footer {
+  width: 55%;
+  margin-right: 9%;
+}
+
+.location-title {
+  width: 48%;
+  margin-top: 4%;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.first-place {
+  width: 50%;
+  height: 2.2em;
+  margin: 4.6% 0 6% 0;
+  text-align: center;
+  background-image: url(./assets/svg/pin.svg);
+  background-repeat: no-repeat;
+  background-position: left 0px top 44%;
+}
+
+.second-place {
+  width: 47%;
+  height: 2.2em;
+  text-align: center;
+  padding-top: 0.6%;
+  background-image: url(./assets/svg/pin.svg);
+  background-repeat: no-repeat;
 }
