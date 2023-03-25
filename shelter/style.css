@@ -166,7 +166,6 @@ body {
 .content-not-only {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   margin-top: 18.5%;
   margin-right: 61%;
 }
@@ -238,7 +237,6 @@ body {
   width: 85%;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   margin-top: 5.2%;
 
 }
@@ -314,7 +312,6 @@ body {
   width: 95%;
   top: 45.5%;
   left: 3%;
-  /* padding-left: 38px; */
   padding-right: 14px;
 
   display: flex;
@@ -327,8 +324,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* flex-wrap: wrap; */
-  /* gap: 12px; */
   margin: 0;
   padding-top: 2.5%;
 }
@@ -363,7 +358,7 @@ body {
 }
 
 .pets-card:hover {
-  scale: 1.2;
+  scale: 1.05;
 }
 
 .pets-card:hover .button-friends {
@@ -482,8 +477,6 @@ body {
 
 .list-help-grid {
   display: grid;
-  /* grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr); */
   grid-template-areas:
     "l1 l1 l2 l2 l3 l3 l3 l4 l4 l5 l5"
     " . l6 l6 l7 l7 l7 l8 l8 l9 l9 .";
@@ -564,123 +557,6 @@ body {
 .help-card-desc {
   margin-top: 29px;
 }
-
-/* .list-help-first-row {
-  display: flex;
-  flex-direction: row;
-  
-  margin-left: 1px;
-  margin-top: 1.5em;
-  column-gap: 5.8em;
-  padding-left: 4em;
-  list-style: none;
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  color: #545454;
-  letter-spacing: 0.06em;
-} */
-
-/* .list-help-second-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 2.7%;
-  column-gap: 7em;
-  padding-left: 8em;
-  list-style: none;
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  color: #545454;
-  letter-spacing: 0.06em;
-} */
-/* 
-.item-help-card {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.help-card-pic {
-  width: 3em;
-}
-
-.help-card-desc {
-  margin-top: 1.6em;
-} */
-
-/* .p1 {
-  margin-left: 18px;
-}
-
-.d1 {
-  margin-left: 6px;
-}
-
-.p2 {
-  margin-left: 50px;
-}
-
-.d2 {
-  margin-left: 2px;
-}
-
-.p3 {
-  margin-left: 5px;
-}
-
-.d3 {
-  margin-left: 11px;
-}
-
-.p4 {
-  margin-left: 51px;
-}
-
-.d4 {
-  margin-left: 6px;
-}
-
-.p5 {
-  margin-left: 23px;
-}
-
-.p6 {
-  margin-left: 27px;
-}
-
-.d6 {
-  margin-left: 12px;
-}
-
-.p7 {
-  margin-left: 1px;
-}
-
-.d7 {
-  margin-left: -20px;
-}
-
-.p8 {
-  margin-left: 32px;
-}
-
-.d8 {
-  margin-left: -20px;
-}
-
-.p9 {
-  margin-left: 21px;
-}
-
-.d9 {
-  margin-left: -20px;
-} */
 
 /* IN-ADDITION */
 
@@ -778,8 +654,7 @@ body {
   background: url(./assets/img/noise_lines.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     #211F20;
-  ;
-}
+  }
 
 .container-footer {
   max-width: 1280px;
