@@ -159,6 +159,7 @@ body {
   padding-left: 3%;
   padding-right: 3%;
   background-image: url(./assets/img/not-only-pic.png);
+  background-size: 54.5%;
   background-repeat: no-repeat;
   background-position: right 40px top 100%;
 }
@@ -229,6 +230,7 @@ body {
   padding-left: 3%;
   padding-right: 3%;
   background-image: url(./assets/img/about-pic.png);
+  background-size: 23.5%;
   background-repeat: no-repeat;
   background-position: left 216px top 36%;
 }
@@ -571,7 +573,8 @@ body {
   padding-top: 2.5%;
   padding-left: 3%;
   padding-right: 3%;
-  background-image: url(./assets/img/iIn-addition-pic.png);
+  background-image: url(./assets/img/in-addition-pic.png);
+  background-size: 39.5%;
   background-repeat: no-repeat;
   background-position: left 182px top 45%;
 }
@@ -624,6 +627,7 @@ body {
   background: #F1CDB3;
   border-radius: 9px;
   background-image: url(./assets/svg/credit-card.svg);
+  background-size: 8.5%;
   background-repeat: no-repeat;
   background-position: left 14px top 44%;
 }
@@ -666,6 +670,7 @@ body {
   display: flex;
   flex-direction: row;
   background-image: url(./assets/img/footer-pic.png);
+  background-size: 23.3%;
   background-repeat: no-repeat;
   background-position: right 40px top 100%;
 }
@@ -702,6 +707,7 @@ body {
   margin: 9.6% 0 6% 0;
   text-align: end;
   background-image: url(./assets/svg/icon-email.svg);
+  background-size: 15.5%;
   background-repeat: no-repeat;
   background-position: left 2px top -26%;
 }
@@ -712,6 +718,7 @@ body {
   text-align: end;
   padding-top: 0.6%;
   background-image: url(./assets/svg/icon-phone.svg);
+  background-size: 16.5%;
   background-repeat: no-repeat;
   background-position: left 2px top 0%;
 }
@@ -748,6 +755,7 @@ body {
   margin: 4.6% 0 6% 0;
   text-align: center;
   background-image: url(./assets/svg/pin.svg);
+  background-size: 6.7%;
   background-repeat: no-repeat;
   background-position: left 0px top 44%;
 }
@@ -758,6 +766,7 @@ body {
   text-align: center;
   padding-top: 0.6%;
   background-image: url(./assets/svg/pin.svg);
+  background-size: 6.7%;
   background-repeat: no-repeat;
 }
 
