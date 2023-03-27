@@ -424,6 +424,15 @@ body {
     background-position: left 2px top 0%;
 }
 
+.link-contact {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.link-contact:hover {
+    filter: brightness(150%);
+}
+
 .location-footer {
     width: 55%;
     margin-right: 9%;
@@ -458,4 +467,13 @@ body {
     padding-top: 0.6%;
     background-image: url(./assets/svg/pin.svg);
     background-repeat: no-repeat;
+}
+
+.link-google {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.link-google:hover {
+    filter: brightness(150%);
 }

@@ -14,17 +14,17 @@
     <header class="header">
         <div class="container-header">
             <div class="logo">
-                <a href="#" class="logo-link">
+                <a href="index.html" class="logo-link">
                     <div class="logo-title">Cozy House</div>
                     <div class="logo-subtitle">Shelter for pets in Boston</div>
                 </a>
             </div>
             <nav class="header-nav">
                 <ul class="list-nav">
-                    <li class="list-item"><a href="#" class="list-item-link">About the shelter</a></li>
+                    <li class="list-item"><a href="index.html" class="list-item-link">About the shelter</a></li>
                     <li class="list-item"><a href="#" class="list-item-link">Our pets</a></li>
-                    <li class="list-item"><a href="#" class="list-item-link">Help the shelter</a></li>
-                    <li class="list-item"><a href="#" class="list-item-link">Contacts</a></li>
+                    <li class="list-item"><a href="index.html#help" class="list-item-link">Help the shelter</a></li>
+                    <li class="list-item"><a href="#footer" class="list-item-link">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,8 +32,8 @@
     <main>
         <section class="our-friends">
             <div class="container-our-friends">
-                <h2 class="our-friends-title">Our friends who<br>
-                    are looking for a house</h2>
+                <h1 class="our-friends-title">Our friends who<br>
+                    are looking for a house</h1>
                 <div class="our-friends-cards">
                     <figure class="pets-card p1">
                         <img src="./assets/img/our-friends-pic1.png" alt="pet-pic" class="pet-pic">
@@ -102,17 +102,25 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container-footer">
             <div class="contacts-footer">
                 <h2 class="contacts-title">For questions and suggestions</h2>
-                <div class="email style-footer">email@shelter.com</div>
-                <div class="phone style-footer">+13 674 567 75 54</div>
+                <a href="mailto:email@shelter.com" class="link-contact">
+                    <div class="email style-footer">email@shelter.com</div>
+                </a>
+                <a href="tel:+136745677554" class="link-contact">
+                    <div class="phone style-footer">+13 674 567 75 54</div>
+                </a>
             </div>
             <div class="location-footer">
                 <h2 class="location-title">We are waiting for your visit</h2>
-                <div class="first-place style-footer">1 Central Street, Boston<br> (entrance from the store)</div>
-                <div class="second-place style-footer">18 South Park, London </div>
+                <a href="https://goo.gl/maps/GnjJahmwyATDRmj86" class="link-google">
+                    <div class="first-place style-footer">1 Central Street, Boston<br> (entrance from the store)</div>
+                </a>
+                <a href="https://goo.gl/maps/wUUq9NVHUDG6uwbW9" class="link-google">
+                    <div class="second-place style-footer">18 South Park, London </div>
+                </a>
             </div>
         </div>
     </footer>
