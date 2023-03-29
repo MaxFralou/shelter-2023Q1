@@ -153,7 +153,7 @@ body {
 
 .container-not-only {
   max-width: 1280px;
-  height: 51em;
+  min-height: 51em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -224,7 +224,7 @@ body {
 
 .container-about {
   max-width: 1280px;
-  height: 39.5em;
+  min-height: 39.5em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -286,7 +286,7 @@ body {
 .container-our-friends {
   position: relative;
   max-width: 1280px;
-  height: 52em;
+  min-height: 52em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -455,7 +455,7 @@ body {
 
 .container-help {
   max-width: 1280px;
-  height: 38.5em;
+  min-height: 38.5em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -568,7 +568,7 @@ body {
 
 .container-in-addition {
   max-width: 1280px;
-  height: 28.6em;
+  min-height: 28.6em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -582,6 +582,7 @@ body {
 .content-in-addition {
   width: 87%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-top: 3.8%;
   padding-left: 56.5%;
@@ -612,10 +613,11 @@ body {
 
 .credit-card {
   width: 95%;
-  height: 2.1em;
+  min-height: 2.1em;
   margin-top: 5px;
   padding-top: 8px;
   padding-right: 15px;
+  padding-left: 43px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -662,7 +664,7 @@ body {
 
 .container-footer {
   max-width: 1280px;
-  height: 22em;
+  min-height: 22em;
   margin: 0 auto;
   padding-top: 2.5%;
   padding-left: 3%;
@@ -703,20 +705,22 @@ body {
 
 .email {
   width: 57%;
-  height: 2.2em;
+  min-height: 2.2em;
   margin: 9.6% 0 6% 0;
+  padding-left: 62px;
   text-align: end;
   background-image: url(./assets/svg/icon-email.svg);
   background-size: 15.5%;
   background-repeat: no-repeat;
-  background-position: left 2px top -26%;
+  background-position: left 2px top 0;
 }
 
 .phone {
   width: 54%;
-  height: 2.2em;
+  min-height: 2.2em;
   text-align: end;
   padding-top: 0.6%;
+  padding-left: 53px;
   background-image: url(./assets/svg/icon-phone.svg);
   background-size: 16.5%;
   background-repeat: no-repeat;
@@ -751,8 +755,9 @@ body {
 
 .first-place {
   width: 50%;
-  height: 2.2em;
+  min-height: 2.2em;
   margin: 4.6% 0 6% 0;
+  padding-left: 12px;
   text-align: center;
   background-image: url(./assets/svg/pin.svg);
   background-size: 6.7%;
@@ -762,9 +767,10 @@ body {
 
 .second-place {
   width: 47%;
-  height: 2.2em;
+  min-height: 2.2em;
   text-align: center;
   padding-top: 0.6%;
+  padding-left: 12px;
   background-image: url(./assets/svg/pin.svg);
   background-size: 6.7%;
   background-repeat: no-repeat;
@@ -777,4 +783,75 @@ body {
 
 .link-google:hover {
   filter: brightness(150%);
+}
+
+
+/* MEDIA */
+
+@media all and (max-width: 1178px) {
+
+  .container-about {
+    background-size: 20%;
+  }
+
+  .navigation-back {
+    margin-left: -2%;
+  }
+
+  .pic3 {
+    display: none;
+  }
+
+  .pets-card {
+    margin: 16px 39px 0 0;
+
+  }
+
+  .container-in-addition {
+    background-size: 31%;
+  }
+
+}
+
+/* FIRST TASK BREAKPOINT 768px */
+
+@media all and (max-width: 768px) {
+
+  /* ****************************** */
+
+  .container-header {
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 3.9%;
+  }
+
+  .list-item:not(:last-child) {
+    margin-right: 2.55em;
+  }
+
+  /* ****************************** */
+
+  .container-not-only {
+    min-height: 67.2em;
+    background-size: 74%;
+    background-position: right 30px top 100%;
+  }
+
+  .content-not-only {
+    margin-top: 5.8%;
+    margin-right: 18%;
+    margin-left: 18%;
+  }
+
+  .desc {
+    padding-top: 8.7%;
+  }
+
+  .button-not-only {
+    margin-top: 9.1%;
+    margin-left: 27.7%;
+  }
+
+  /* ****************************** */
+
 }
