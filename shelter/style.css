@@ -975,5 +975,76 @@ body {
 
   /* ****************************** */
 
-  
+  .container-in-addition {
+    min-height: 48.9em;
+    background-size: 66%;
+    background-position: left 130px top 81%;
+  }
+
+  .content-in-addition {
+    margin-top: 8.5%;
+    padding-left: 23.5%;
+    padding-right: 12%;
+  }
+
+  /* ****************************** */
+
+  .container-footer {
+    min-height: 40em;
+    background-size: 38.8%;
+    background-position: center top 100%;
+
+  }
+
+  .contacts-footer {
+    width: 100%;
+  }
+
+  .contacts-title {
+    width: 95%;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 12%;
+  }
+
+  .email {
+    width: 81%;
+    padding-left: 100px;
+    background-size: 13.5%;
+    background-position: left 42px bottom 16px;
+  }
+
+  .phone {
+    width: 78%;
+    padding-top: 1%;
+    padding-left: 86px;
+    background-size: 14.5%;
+    background-position: left 39px top 0%;
+  }
+
+  .location-footer {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .location-title {
+    width: 85%;
+    margin-top: 3%;
+    padding-left: 19px;
+  }
+
+  .first-place {
+    width: 87%;
+    margin: 9.6% 0 6% 0;
+    padding-left: 42px;
+    background-size: 7.2%;
+    background-position: left 17px top 44%;
+  }
+
+  .second-place {
+    width: 84%;
+    padding-top: 3.6%;
+    padding-left: 43px;
+    background-position: left 19px top 68%;
+  }
 }
