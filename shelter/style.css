@@ -855,9 +855,9 @@ body {
   /* ****************************** */
 
   .container-about {
-    min-height: 69em;
+    min-height: 65.5em;
     background-size: 39%;
-    background-position: left 234px top 77.6%;
+    background-position: left 234px top 84.6%;
   }
 
   .content-about {
@@ -882,5 +882,43 @@ body {
   }
 
   /* ****************************** */
+
+  .container-our-friends {
+    min-height: 54.8em;
+  }
+
+  .our-friends-title {
+    padding-top: 8.5%;
+  }
+
+  .navigation-container {
+    top: 48%;
+  }
+
+  .navigation-back {
+    margin-left: 1%;
+  }
+
+  .slider-our-friends {
+    padding-top: 12.5%;
+    padding-left: 5%;
+
+  }
+
+  .pets-card {
+    margin: 16px 33px 0 0;
+  }
+
+  .pet-name {
+    padding-top: 2%;
+  }
+
+  .button-friends-more {
+    margin-top: 7.9%;
+    margin-left: 32%;
+  }
+
+  /* ****************************** */
+
 
 }
