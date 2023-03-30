@@ -902,7 +902,6 @@ body {
   .slider-our-friends {
     padding-top: 12.5%;
     padding-left: 5%;
-
   }
 
   .pets-card {
@@ -920,5 +919,61 @@ body {
 
   /* ****************************** */
 
+  .container-help {
+    min-height: 48.7em;
+  }
 
+  .help-title {
+    margin-top: 8.5%;
+  }
+
+  .list-help-grid {
+    grid-template-areas:
+      "l1 l2 l3"
+      "l4 l5 l6"
+      "l7 l8 l9";
+    row-gap: 58px;
+  }
+
+  .l1 {
+    padding-left: 0;
+    padding-right: 44px;
+  }
+
+  .l2 {
+    padding-left: 0;
+    padding-right: 51px;
+  }
+
+  .l3 {
+    padding-right: 45px;
+  }
+
+  .l4 {
+    padding-right: 47px;
+  }
+
+  .l5 {
+    padding-right: 49px;
+  }
+
+  .l6 {
+    padding-right: 46px;
+  }
+
+  .l7 {
+    padding-right: 47px;
+  }
+
+  .l8 {
+    padding-right: 45px;
+  }
+
+  .l9 {
+    padding-right: 42px;
+  }
+
+  /* ****************************** */
+
+  
 }
