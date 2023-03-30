@@ -1272,5 +1272,173 @@ body {
 
   /* ****************************** */
 
-  
+  .container-our-friends {
+    min-height: 49.4em;
+  }
+
+  .our-friends-title {
+    padding-top: 11.2%;
+    padding-left: 3px;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .navigation-container {
+    top: 76.3%;
+    width: 62.7%;
+    left: 20.4%;
+  }
+
+  .slider-our-friends {
+    padding-top: 16%;
+    padding-left: 11%;
+  }
+
+  .button-friends-more {
+    margin-top: 38.2%;
+    margin-left: 6.5%;
+  }
+
+  /* ****************************** */
+
+  .container-help {
+    min-height: 46.7em;
+  }
+
+  .help-title {
+    padding-top: 3%;
+    padding-left: 2px;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .list-help-grid {
+    padding-left: 13px;
+    margin-top: 20px;
+    row-gap: 31px;
+    column-gap: 35px;
+  }
+
+  .help-card-desc {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  /* ****************************** */
+
+  .container-in-addition {
+    min-height: 33.8em;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-size: 82%;
+    background-position: left 29px top 89.7%;
+  }
+
+
+  .content-in-addition {
+    width: 100%;
+    margin-top: 8%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+
+  .in-addition-title {
+    padding-top: 2%;
+    padding-left: 2px;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .in-addition-sutitle {
+    padding-top: 1%;
+    text-align: center;
+    line-height: 160%;
+    letter-spacing: 0;
+  }
+
+  .credit-card {
+    width: 90%;
+    min-height: 2.9em;
+    margin-top: 5px;
+    margin-left: 15px;
+    padding-top: 14px;
+    padding-right: 16px;
+    padding-left: 51px;
+    font-size: 15px;
+    line-height: 110%;
+    background-size: 10.5%;
+    background-position: left 16px top 53%;
+  }
+
+  .in-addition-legal {
+    margin-top: 6.3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+  }
+
+  /* ****************************** */
+
+  .container-footer {
+    min-height: 50.5em;
+    background-size: 80.2%;
+  }
+
+  .contacts-title {
+    margin-top: 7%;
+    padding-left: 5%;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .email {
+    padding-top: 7px;
+    padding-left: 84px;
+    background-size: 16.5%;
+    background-position: left 24px bottom 10px;
+  }
+
+  .phone {
+    width: 90%;
+    padding-top: 6%;
+    padding-left: 70px;
+    background-size: 14.5%;
+    background-position: left 31px top 98%;
+  }
+
+  .location-footer {
+    margin-bottom: 91%;
+  }
+
+  .location-title {
+    width: 92%;
+    margin-top: 0;
+    padding-left: 8%;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .first-place {
+    width: 100%;
+    margin: 12.6% 0 6% 0;
+    padding-left: 20px;
+    padding-bottom: 2px;
+    letter-spacing: 0.07em;
+    background-position: left 0px top 44%;
+  }
+
+  .second-place {
+    width: 94%;
+    padding-top: 8.6%;
+    padding-left: 31px;
+    background-size: 7.7%;
+    background-position: left bottom;
+  }
+
 }
