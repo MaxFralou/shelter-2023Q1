@@ -149,6 +149,37 @@ body {
     text-underline-offset: 20%;
 }
 
+.burger-btn {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 20px;
+    z-index: 30;
+    width: 30px;
+    background-color: transparent;
+    transition: 0.7s;
+}
+
+.burger-lines {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    /* transition: transform .7s, opacity .7s, top .2s, background-color .5s; */
+}
+
+.lin1 {
+    top: 1px
+}
+
+.lin2 {
+    top: 11px;
+}
+
+.lin3 {
+    top: 21px;
+}
+
 /* OUR-FRIENDS */
 
 .our-friends {
@@ -610,5 +641,161 @@ body {
         padding-top: 3.6%;
         padding-left: 43px;
         background-position: left 19px top 68%;
+    }
+}
+
+/* INTERMEDIATE BREAKPOINT */
+
+@media all and (max-width: 767px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .burger-btn {
+        position: absolute;
+        display: block;
+    }
+}
+
+@media all and (max-width: 604px) {
+
+    .our-friends-title {
+        padding-bottom: 132px;
+    }
+
+    .our-friends-cards {
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3";
+        grid-template-columns: repeat(1, 17.2em);
+    }
+
+    .p4 {
+        display: none;
+    }
+
+    .p5 {
+        display: none;
+    }
+
+    .p6 {
+        display: none;
+    }
+
+    .navigation-button {
+        margin-left: 3px;
+        margin-right: 6px;
+    }
+
+
+    .container-footer {
+        min-height: 50.5em;
+        background-size: 80.2%;
+        flex-wrap: wrap;
+    }
+
+    .contacts-title {
+        margin-top: 7%;
+        padding-left: 5%;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .email {
+        padding-top: 7px;
+        padding-left: 84px;
+        background-size: 9.5%;
+        background-position: left 24px bottom 10px;
+    }
+
+    .phone {
+        width: 90%;
+        padding-top: 6%;
+        padding-left: 70px;
+        background-size: 9.5%;
+        background-position: left 31px top 98%;
+    }
+
+    .location-footer {
+        margin-bottom: 91%;
+    }
+
+    .location-title {
+        width: 92%;
+        margin-top: 0;
+        padding-left: 8%;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .first-place {
+        width: 100%;
+        margin: 12.6% 0 6% 0;
+        padding-left: 20px;
+        padding-bottom: 2px;
+        letter-spacing: 0.07em;
+        background-size: 5.2%;
+        background-position: left 0px top 44%;
+    }
+
+    .second-place {
+        width: 94%;
+        padding-top: 8.6%;
+        padding-left: 31px;
+        background-size: 5.2%;
+        background-position: left bottom;
+    }
+
+}
+
+/* SECOND TASK BREAKPOINT 320px */
+
+@media all and (max-width: 320px) {
+
+    .container-header {
+        padding-top: 10%;
+        padding-left: 6%;
+    }
+
+    /* ****************************** */
+
+    .container-our-friends {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .our-friends-title {
+        margin-top: 62px;
+        padding-bottom: 0;
+        font-size: 25px;
+    }
+
+    .our-friends-cards {
+        margin-top: 31px;
+    }
+
+    .navigation {
+        margin-top: 39px;
+        padding-bottom: 43px;
+    }
+
+    /* ****************************** */
+
+    .email {
+        background-size: 16.5%;
+    }
+
+    .phone {
+        background-size: 14.5%;
+    }
+
+    .first-place {
+        background-size: 7.7%;
+    }
+
+    .second-place {
+        background-size: 7.7%;
     }
 }
