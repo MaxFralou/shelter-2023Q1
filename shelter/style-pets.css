@@ -157,7 +157,7 @@ body {
 
 .container-our-friends {
     max-width: 1280px;
-    height: 85.5em;
+    min-height: 85.5em;
     margin: 0 auto;
     padding-top: 2.5%;
     padding-left: 3%;
@@ -358,6 +358,7 @@ body {
 
 /* FOOTER */
 
+
 .footer {
     background: url(./assets/img/noise_lines.png),
         radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
@@ -366,7 +367,7 @@ body {
 
 .container-footer {
     max-width: 1280px;
-    height: 22em;
+    min-height: 22em;
     margin: 0 auto;
     padding-top: 2.5%;
     padding-left: 3%;
@@ -374,6 +375,7 @@ body {
     display: flex;
     flex-direction: row;
     background-image: url(./assets/img/footer-pic.png);
+    background-size: 23.3%;
     background-repeat: no-repeat;
     background-position: right 40px top 100%;
 }
@@ -406,20 +408,24 @@ body {
 
 .email {
     width: 57%;
-    height: 2.2em;
+    min-height: 2.2em;
     margin: 9.6% 0 6% 0;
+    padding-left: 62px;
     text-align: end;
     background-image: url(./assets/svg/icon-email.svg);
+    background-size: 15.5%;
     background-repeat: no-repeat;
-    background-position: left 2px top -26%;
+    background-position: left 2px top 0;
 }
 
 .phone {
     width: 54%;
-    height: 2.2em;
+    min-height: 2.2em;
     text-align: end;
     padding-top: 0.6%;
+    padding-left: 53px;
     background-image: url(./assets/svg/icon-phone.svg);
+    background-size: 16.5%;
     background-repeat: no-repeat;
     background-position: left 2px top 0%;
 }
@@ -452,20 +458,24 @@ body {
 
 .first-place {
     width: 50%;
-    height: 2.2em;
+    min-height: 2.2em;
     margin: 4.6% 0 6% 0;
+    padding-left: 12px;
     text-align: center;
     background-image: url(./assets/svg/pin.svg);
+    background-size: 6.7%;
     background-repeat: no-repeat;
     background-position: left 0px top 44%;
 }
 
 .second-place {
     width: 47%;
-    height: 2.2em;
+    min-height: 2.2em;
     text-align: center;
     padding-top: 0.6%;
+    padding-left: 12px;
     background-image: url(./assets/svg/pin.svg);
+    background-size: 6.7%;
     background-repeat: no-repeat;
 }
 
@@ -476,4 +486,129 @@ body {
 
 .link-google:hover {
     filter: brightness(150%);
+}
+
+/* MEDIA */
+
+@media all and (max-width: 1250px) {
+    .our-friends-cards {
+        grid-template-areas:
+            "p1 p2"
+            "p3 p4"
+            "p5 p6"
+            "p7 p8";
+        grid-template-columns: repeat(2, 17.2em);
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .navigation {
+        padding-bottom: 35px;
+    }
+}
+
+/* FIRST TASK BREAKPOINT 768px */
+
+@media all and (max-width: 768px) {
+
+    /* ****************************** */
+
+    .container-header {
+        padding-top: 4%;
+        padding-left: 4%;
+        padding-right: 3.9%;
+    }
+
+    .list-item:not(:last-child) {
+        margin-right: 2.55em;
+    }
+
+    /* ****************************** */
+
+    .our-friends-title {
+        margin-top: 92px;
+    }
+
+    .our-friends-cards {
+        grid-template-areas:
+            "p1 p2"
+            "p3 p4"
+            "p5 p6";
+        margin-top: 14px;
+        row-gap: 27px;
+    }
+
+    .p7 {
+        display: none;
+    }
+
+    .p8 {
+        display: none;
+    }
+
+    .navigation {
+        margin-top: 35px;
+        padding-bottom: 77px;
+    }
+
+    /* ****************************** */
+
+    .container-footer {
+        min-height: 40em;
+        background-size: 38.8%;
+        background-position: center top 100%;
+
+    }
+
+    .contacts-footer {
+        width: 100%;
+    }
+
+    .contacts-title {
+        width: 95%;
+        margin-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 12%;
+    }
+
+    .email {
+        width: 81%;
+        padding-left: 100px;
+        background-size: 13.5%;
+        background-position: left 42px bottom 16px;
+    }
+
+    .phone {
+        width: 78%;
+        padding-top: 1%;
+        padding-left: 86px;
+        background-size: 14.5%;
+        background-position: left 39px top 0%;
+    }
+
+    .location-footer {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .location-title {
+        width: 85%;
+        margin-top: 3%;
+        padding-left: 19px;
+    }
+
+    .first-place {
+        width: 87%;
+        margin: 9.6% 0 6% 0;
+        padding-left: 42px;
+        background-size: 7.2%;
+        background-position: left 17px top 44%;
+    }
+
+    .second-place {
+        width: 84%;
+        padding-top: 3.6%;
+        padding-left: 43px;
+        background-position: left 19px top 68%;
+    }
 }
