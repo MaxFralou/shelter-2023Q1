@@ -59,6 +59,32 @@ body {
     font-family: 'Georgia', 'Arial';
 }
 
+.body-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.body-wrapper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    /* backdrop-filter: blur(10px);  */
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.body-wrapper.show-menu::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* HEADER START */
 
 .header {
@@ -133,7 +159,7 @@ body {
     text-decoration: underline;
     text-decoration-color: #F1CDB3;
     text-decoration-thickness: 3px;
-    text-underline-offset: 20%;
+    text-underline-offset: 40%;
 }
 
 .list-item-link:hover {
@@ -146,7 +172,7 @@ body {
     text-decoration: underline;
     text-decoration-color: #F1CDB3;
     text-decoration-thickness: 3px;
-    text-underline-offset: 20%;
+    text-underline-offset: 40%;
 }
 
 .burger-btn {
@@ -157,7 +183,7 @@ body {
     z-index: 30;
     width: 30px;
     background-color: transparent;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 .burger-lines {
@@ -165,7 +191,12 @@ body {
     width: 100%;
     height: 2px;
     background-color: #000000;
-    /* transition: transform .7s, opacity .7s, top .2s, background-color .5s; */
+}
+
+.active-burger-btn {
+    top: 60px;
+    right: 33px;
+    transform: rotate(-90deg);
 }
 
 .lin1 {
@@ -649,7 +680,41 @@ body {
 @media all and (max-width: 767px) {
 
     .header-nav {
-        display: none;
+        position: absolute;
+        width: 320px;
+        right: -100%;
+        top: 0;
+        transition: all 0.5s;
+        z-index: 9;
+    }
+
+    .active-nav {
+        right: 0;
+    }
+
+    .list-nav {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+        background: #FFFFFF;
+    }
+
+    .list-item:not(:last-child) {
+        margin-right: 0;
+        padding-bottom: 40px;
+    }
+
+    .list-item {
+        padding-right: 40px;
     }
 
     .burger-btn {
