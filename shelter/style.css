@@ -353,7 +353,7 @@ body {
   min-height: 52em;
   margin: 0 auto;
   padding-top: 2.5%;
-  padding-left: 3%;
+  padding-left: 8%;
   padding-right: 3%;
 }
 
@@ -363,7 +363,7 @@ body {
   margin: 0 0 0 0;
   padding-top: 0.5%;
   padding-left: 1%;
-  padding-right: 1%;
+  padding-right: 7%;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -385,12 +385,18 @@ body {
   justify-content: space-between;
   position: absolute;
 }
+.slider-wrapper{
+  width: 67.5em;
+  overflow: hidden;
+}
 
 .slider-our-friends {
+  position: relative; 
+   left: -71em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   margin: 0;
+  padding-left: 6.5%;
   padding-top: 2.5%;
 }
 
@@ -405,6 +411,7 @@ body {
   background-position: center;
   cursor: pointer;
   transition: all 0.5s;
+  z-index: 1;
 }
 
 .navigation-back:hover {
@@ -430,6 +437,13 @@ body {
 
 .pets-card:hover .button-friends {
   background: #FDDCC4;
+}
+
+.pet-pic {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 9px 9px 0 0;
 }
 
 .pet-name {
@@ -478,6 +492,7 @@ body {
   background-position: center;
   cursor: pointer;
   transition: all 0.5s;
+  z-index: 1;
 }
 
 .navigation-forward:hover {
@@ -492,7 +507,7 @@ body {
   width: 261px;
   height: 52px;
   margin-top: 4.9%;
-  margin-left: 39.2%;
+  margin-left: 36.2%;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: #F1CDB3;
@@ -511,6 +526,38 @@ body {
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
+
+@keyframes spin-slider-forward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slider-backward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+.transition-slider-forward{
+  animation-name: spin-slider-forward;
+  animation-duration: 0.5s;
+   
+}
+
+.transition-slider-backward{
+  animation-name: spin-slider-backward;
+  animation-duration: 0.5s;
+   
+}
+
 
 /* HELP */
 
@@ -950,6 +997,7 @@ body {
 
   .container-our-friends {
     min-height: 54.8em;
+    padding-left: 14%;
   }
 
   .our-friends-title {
@@ -963,10 +1011,14 @@ body {
   .navigation-back {
     margin-left: 1%;
   }
+  .slider-wrapper {
+    width: 35em;
+    overflow: hidden;}
 
   .slider-our-friends {
+    left: -43em;
     padding-top: 12.5%;
-    padding-left: 5%;
+    padding-left: 12%;
   }
 
   .pets-card {
@@ -977,9 +1029,13 @@ body {
     padding-top: 2%;
   }
 
+  .pic3{
+    display: block;
+  }
+
   .button-friends-more {
     margin-top: 7.9%;
-    margin-left: 32%;
+    margin-left: 23%;
   }
 
   /* ****************************** */
@@ -1340,6 +1396,7 @@ body {
 
   .container-our-friends {
     min-height: 49.4em;
+    padding-left: 9%;
   }
 
   .our-friends-title {
@@ -1351,20 +1408,28 @@ body {
   }
 
   .navigation-container {
-    top: 76.3%;
+    top: 80.3%;
     width: 62.7%;
-    left: 20.4%;
+    left: 22.4%;
   }
 
+  .slider-wrapper {
+    width: 52em;}
+
   .slider-our-friends {
-    padding-top: 16%;
+    left: -24.5em;
+    padding-top: 8%;
     padding-left: 11%;
   }
 
   .button-friends-more {
     margin-top: 38.2%;
-    margin-left: 6.5%;
+    margin-left: 2.5%;
   }
+
+  .pic2 {
+    display: block;
+}
 
   /* ****************************** */
 
