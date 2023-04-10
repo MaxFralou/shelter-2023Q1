@@ -145,15 +145,21 @@ backButton.addEventListener('click', () => {
     spinBackward()
     backward()
     addHtml()
+    updatePetCards()
+    overPetCards()
   }
   else if (countPetCard === 2) {
     spinBackward()
     backward()
     addHtml2()
+    updatePetCards()
+    overPetCards()
   } else if (countPetCard === 1) {
     spinBackward()
     backward()
     addHtml3()
+    updatePetCards()
+    overPetCards()
   }
 })
 
@@ -162,21 +168,24 @@ forwardButton.addEventListener('click', () => {
     spinForward()
     forward()
     addHtml()
+    updatePetCards()
+    overPetCards()
   }
   else if (countPetCard === 2) {
     spinForward()
     forward()
     addHtml2()
+    updatePetCards()
+    overPetCards()
   } else if (countPetCard === 1) {
     spinForward()
     forward()
     addHtml3()
+    updatePetCards()
+    overPetCards()
   }
 })
 
-let html3 = ``
-let html2 = ``
-let html1 = ``
 
 if (countPetCard === 3) {
   addHtml()
@@ -188,76 +197,77 @@ if (countPetCard === 3) {
 
 function addHtml() {
   slider.innerHTML = ''
-  html3 = `
-<figure class="pets-card pic1">
+  let html1 = `
+<figure class="pets-card pic1" data-index="0">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
 <figcaption>
     <h3 class="pet-name">${data[pastArr[0]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic2">
+<figure class="pets-card pic2" data-index="1">
 <img src="${data[pastArr[1]].img}" alt="pet-pic" class="pet-pic img2">
 <figcaption>
     <h3 class="pet-name">${data[pastArr[1]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic3">
+<figure class="pets-card pic3" data-index="2">
 <img src="${data[pastArr[2]].img}" alt="pet-pic" class="pet-pic img3">
 <figcaption>
     <h3 class="pet-name">${data[pastArr[2]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic4">
+<figure class="pets-card pic4" data-index="3">
 <img src="${data[currArr[0]].img}" alt="pet-pic" class="pet-pic img4">
 <figcaption>
     <h3 class="pet-name">${data[currArr[0]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic5">
+<figure class="pets-card pic5" data-index="4">
 <img src="${data[currArr[1]].img}" alt="pet-pic" class="pet-pic img5">
 <figcaption>
     <h3 class="pet-name">${data[currArr[1]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic6">
+<figure class="pets-card pic6" data-index="5">
 <img src="${data[currArr[2]].img}" alt="pet-pic" class="pet-pic img6">
 <figcaption>
     <h3 class="pet-name">${data[currArr[2]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic7">
+<figure class="pets-card pic7" data-index="6">
 <img src="${data[nextArr[0]].img}" alt="pet-pic" class="pet-pic img7">
 <figcaption>
     <h3 class="pet-name">${data[nextArr[0]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic8">
+<figure class="pets-card pic8" data-index="7">
 <img src="${data[nextArr[1]].img}" alt="pet-pic" class="pet-pic img8">
 <figcaption>
     <h3 class="pet-name">${data[nextArr[1]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>
-<figure class="pets-card pic9">
+<figure class="pets-card pic9" data-index="8">
 <img src="${data[nextArr[2]].img}" alt="pet-pic" class="pet-pic img9">
 <figcaption>
     <h3 class="pet-name">${data[nextArr[2]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>`;
-  slider.insertAdjacentHTML("afterbegin", html3)
+  slider.insertAdjacentHTML("afterbegin", html1)
+
 }
 
 function addHtml2() {
   slider.innerHTML = ''
-  html2 = `
+  let html2 = `
 <figure class="pets-card pic1">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
 <figcaption>
@@ -305,7 +315,7 @@ function addHtml2() {
 
 function addHtml3() {
   slider.innerHTML = ''
-  html3 = `
+  let html3 = `
 <figure class="pets-card pic1">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
 <figcaption>
@@ -343,9 +353,45 @@ slider.addEventListener('animationend', () => {
 })
 
 
+// POP-UP
+
+let petCards = []
+
+function updatePetCards() {
+  petCards = document.querySelectorAll('.pets-card');
+
+}
+
+updatePetCards()
 
 
+const popUp = document.querySelector('.pop-up-container')
 
+function updateDataPet(index) {
+  popUp.innerHTML = ''
+  let generatePopUP = `<img src="${data[index].img}" alt="" class="pop-up-pet-pic">
+  <div class="content-pop-up">
+      <h2 class="name-pet">${data[index].name}</h2>
+      <h3 class="breed-pet">${data[index].breed}</h3>
+      <p class="description">${data[index].description}</p>
+      <ul class="prop-pet">
+          <li class="age-pet prop-item"><strong>Age: </strong><span class="age-pet-data">${data[index].age}</span></li>
+          <li class="inoculations-pet prop-item"><strong>Inoculations: </strong><span class="inoculations-pet-data">${data[index].inoculations}</span></li>
+          <li class="diseases-pet prop-item"><strong>Diseases: </strong><span class="diseases-pet-data">${data[index].diseases}</span></li>
+          <li class="parasites-pet prop-item"><strong>Parasites: </strong><span class="parasites-pet-data">${data[index].parasites}</span></li>
+      </ul>`;
+  popUp.insertAdjacentHTML("afterbegin", generatePopUP)
+}
+
+function overPetCards() {
+  petCards.forEach((card, index) => {
+    card.addEventListener('click', (event) => {
+      const currIndex = index % currArr.length;
+      updateDataPet(currArr[currIndex]);
+    });
+  });
+}
+overPetCards()
 
 
 
