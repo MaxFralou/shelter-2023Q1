@@ -85,6 +85,25 @@ body {
     pointer-events: auto;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    /* backdrop-filter: blur(10px); */
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popUpOverlay .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* HEADER START */
 
 .header {
@@ -164,7 +183,7 @@ body {
 
 .list-item-link:hover {
     color: #292929;
-   }
+}
 
 .list-item-link:focus {
     color: #292929;
@@ -214,6 +233,116 @@ body {
 
 .our-friends {
     background: #F6F6F6;
+}
+
+.pop-up-container {
+    position: absolute;
+    left: 9em;
+    top: 9em;
+    margin: 0 auto;
+    width: 77.5%;
+    min-height: 500px;
+    border-radius: 9px 9px 9px 9px;
+    display: flex;
+    flex-direction: row;
+    background: #FAFAFA;
+    z-index: 2;
+    transition: all 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content-pop-up {
+    margin-left: 3%;
+    padding-top: 2.5%;
+
+}
+
+.pop-up-pet-pic {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+    object-fit: cover;
+    margin-top: 0;
+
+}
+
+.name-pet {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin: 0;
+    padding-top: 7%;
+}
+
+.breed-pet {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-top: 2%;
+}
+
+.description {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    padding-top: 5%;
+    padding-right: 15%;
+}
+
+.prop-pet {
+    margin: 0;
+    padding-left: 0;
+    padding-top: 7%;
+    list-style: none;
+}
+
+.prop-item {
+    padding-bottom: 3.1%;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.prop-item::before {
+    content: "•";
+    color: #F1CDB3;
+    margin-right: 6px;
+}
+
+
+.button-close {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    width: 3.3em;
+    height: 3.2em;
+    margin-top: 0.1%;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: transparent;
+    background-image: url('./assets/svg/close-pop-up-pic.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 9999;
 }
 
 .container-our-friends {
@@ -586,6 +715,42 @@ body {
 
     /* ****************************** */
 
+    .pop-up-container {
+        width: 86%;
+        min-height: 351px;
+        left: 3em;
+        top: 14em;
+
+    }
+
+    .pop-up-pet-pic {
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .content-pop-up {
+        margin-left: 2%;
+        padding-top: 1.5%;
+    }
+
+    .name-pet {
+        padding-top: 0%;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        padding-top: 2%;
+        padding-right: 16%;
+    }
+
+    .prop-pet {
+        padding-top: 2%;
+        padding-right: 16%;
+    }
+
     .our-friends-title {
         margin-top: 92px;
     }
@@ -824,6 +989,50 @@ body {
     }
 
     /* ****************************** */
+    .pop-up-container {
+        width: 84%;
+        min-height: 394px;
+        left: 2em;
+        top: 12em;
+    }
+
+    .pop-up-pet-pic {
+        display: none;
+    }
+
+    .content-pop-up {
+        margin-left: 4%;
+        padding-top: 5.5%;
+
+    }
+
+    .name-pet {
+        text-align: center;
+        padding-right: 14%;
+        padding-top: 0%;
+    }
+
+    .breed-pet {
+        text-align: center;
+        padding-right: 16%;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        padding-top: 1%;
+        padding-right: 14%;
+    }
+
+    .prop-pet {
+        padding-top: 3%;
+        padding-right: 16%;
+    }
+
+    .button-close {
+        right: -10px;
+    }
 
     .container-our-friends {
         padding-left: 2%;

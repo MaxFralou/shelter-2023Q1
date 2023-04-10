@@ -78,9 +78,10 @@ let nextArr = []
 let countPetCard = 3;
 
 
-if (window.innerWidth === 768) {
+if (window.innerWidth < 769) {
   countPetCard = 2;
-} else if (window.innerWidth === 320) {
+}
+if (window.innerWidth === 320) {
   countPetCard = 1;
 }
 
@@ -141,51 +142,54 @@ function backward() {
   }
 }
 
-backButton.addEventListener('click', () => {
-  if (countPetCard === 3) {
-    spinBackward()
-    backward()
-    addHtml()
-    updatePetCards()
-    overPetCards()
-  }
-  else if (countPetCard === 2) {
-    spinBackward()
-    backward()
-    addHtml2()
-    updatePetCards()
-    overPetCards()
-  } else if (countPetCard === 1) {
-    spinBackward()
-    backward()
-    addHtml3()
-    updatePetCards()
-    overPetCards()
-  }
-})
-
-forwardButton.addEventListener('click', () => {
-  if (countPetCard === 3) {
-    spinForward()
-    forward()
-    addHtml()
-    updatePetCards()
-    overPetCards()
-  }
-  else if (countPetCard === 2) {
-    spinForward()
-    forward()
-    addHtml2()
-    updatePetCards()
-    overPetCards()
-  } else if (countPetCard === 1) {
-    spinForward()
-    forward()
-    addHtml3()
-    updatePetCards()
-    overPetCards()
-  }
-})
+if (backButton !== null) {
+  backButton.addEventListener('click', () => {
+    if (countPetCard === 3) {
+      spinBackward()
+      backward()
+      addHtml()
+      updatePetCards()
+      overPetCards()
+    }
+    else if (countPetCard === 2) {
+      spinBackward()
+      backward()
+      addHtml2()
+      updatePetCards()
+      overPetCards()
+    } else if (countPetCard === 1) {
+      spinBackward()
+      backward()
+      addHtml3()
+      updatePetCards()
+      overPetCards()
+    }
+  })
+}
+if (forwardButton !== null) {
+  forwardButton.addEventListener('click', () => {
+    if (countPetCard === 3) {
+      spinForward()
+      forward()
+      addHtml()
+      updatePetCards()
+      overPetCards()
+    }
+    else if (countPetCard === 2) {
+      spinForward()
+      forward()
+      addHtml2()
+      updatePetCards()
+      overPetCards()
+    } else if (countPetCard === 1) {
+      spinForward()
+      forward()
+      addHtml3()
+      updatePetCards()
+      overPetCards()
+    }
+  })
+}
 
 
 if (countPetCard === 3) {
@@ -197,7 +201,7 @@ if (countPetCard === 3) {
 }
 
 function addHtml() {
-  slider.innerHTML = ''
+  if (slider !== null) { slider.innerHTML = '' }
   let html1 = `
 <figure class="pets-card pic1" data-index="0">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
@@ -262,12 +266,12 @@ function addHtml() {
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>`;
-  slider.insertAdjacentHTML("afterbegin", html1)
+  if (slider !== null) { slider.insertAdjacentHTML("afterbegin", html1) }
 
 }
 
 function addHtml2() {
-  slider.innerHTML = ''
+  if (slider !== null) { slider.innerHTML = '' }
   let html2 = `
 <figure class="pets-card pic1">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
@@ -311,11 +315,11 @@ function addHtml2() {
     <button class="button-friends button">Learn more</button>
 </figcaption>
 </figure>`;
-  slider.insertAdjacentHTML("afterbegin", html2)
+  if (slider !== null) { slider.insertAdjacentHTML("afterbegin", html2) }
 }
 
 function addHtml3() {
-  slider.innerHTML = ''
+  if (slider !== null) { slider.innerHTML = '' }
   let html3 = `
 <figure class="pets-card pic1">
 <img src="${data[pastArr[0]].img}" alt="pet-pic" class="pet-pic img1">
@@ -337,7 +341,7 @@ function addHtml3() {
     <h3 class="pet-name">${data[nextArr[0]].name}</h3>
     <button class="button-friends button">Learn more</button>
 </figcaption>`;
-  slider.insertAdjacentHTML("afterbegin", html3);
+  if (slider !== null) { slider.insertAdjacentHTML("afterbegin", html3); }
 
 }
 
@@ -348,13 +352,17 @@ const spinBackward = () => {
   slider.classList.add('transition-slider-backward')
 }
 
-slider.addEventListener('animationend', () => {
-  slider.classList.remove('transition-slider-forward')
-  slider.classList.remove('transition-slider-backward')
-})
+if (slider !== null) {
+  slider.addEventListener('animationend', () => {
+    slider.classList.remove('transition-slider-forward')
+    slider.classList.remove('transition-slider-backward')
+  })
+}
 
 
 // POP-UP
+
+
 
 let petCards = []
 
@@ -393,11 +401,15 @@ function updateDataPet(index) {
 function overPetCards() {
   petCards.forEach((card, index) => {
     card.addEventListener('click', (event) => {
-      const currIndex = index % currArr.length;
-      updateDataPet(currArr[currIndex]);
-      visiblePopUp()
-
-
+      if (document.title === "Cozy House") {
+        const currIndex = index % currArr.length;
+        updateDataPet(currArr[currIndex]);
+        visiblePopUp()
+      } else {
+        console.log(index)
+        updateDataPet(index);
+        visiblePopUp()
+      }
     });
   });
 }
@@ -424,10 +436,17 @@ function hiddenPopUp() {
 
 const masterPopUp = document.querySelector('.pop-up-container')
 
+if (document.title === "Cozy House -Pets") {
+  popUp.style.top = '29em'
+}
 
+if (window.innerWidth < 769 && document.title === "Cozy House -Pets") {
+  popUp.style.top = '45em'
+}
 
-
-
+if (window.innerWidth === 320 && document.title === "Cozy House -Pets") {
+  popUp.style.top = '40em'
+}
 
 
 
