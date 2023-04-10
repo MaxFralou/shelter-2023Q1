@@ -35,6 +35,7 @@ document.addEventListener("click", (event) => {
   if (!MENU.contains(event.target) && !BURGER_BTN.contains(event.target)) {
     closeMenu();
   }
+
 });
 
 LINKS.forEach((link) => {
@@ -379,8 +380,14 @@ function updateDataPet(index) {
           <li class="inoculations-pet prop-item"><strong>Inoculations: </strong><span class="inoculations-pet-data">${data[index].inoculations}</span></li>
           <li class="diseases-pet prop-item"><strong>Diseases: </strong><span class="diseases-pet-data">${data[index].diseases}</span></li>
           <li class="parasites-pet prop-item"><strong>Parasites: </strong><span class="parasites-pet-data">${data[index].parasites}</span></li>
-      </ul>`;
+      </ul>
+      <div class="button-close"></div>`;
   popUp.insertAdjacentHTML("afterbegin", generatePopUP)
+  const buttonClosePopUp = document.querySelector('.button-close')
+  buttonClosePopUp.addEventListener('click', () => {
+    hiddenPopUp()
+  })
+
 }
 
 function overPetCards() {
@@ -388,11 +395,34 @@ function overPetCards() {
     card.addEventListener('click', (event) => {
       const currIndex = index % currArr.length;
       updateDataPet(currArr[currIndex]);
+      visiblePopUp()
+
+
     });
   });
 }
 overPetCards()
 
+
+
+let flagPopUp = false;
+
+function visiblePopUp() {
+  masterPopUp.style.visibility = 'visible'
+  masterPopUp.style.opacity = 1
+  BODY_DIMM.classList.add('popUpOverlay')
+  flagPopUp = !flagPopUp
+
+}
+
+function hiddenPopUp() {
+  masterPopUp.style.visibility = 'hidden'
+  masterPopUp.style.opacity = 0
+  BODY_DIMM.classList.remove('popUpOverlay')
+
+}
+
+const masterPopUp = document.querySelector('.pop-up-container')
 
 
 
