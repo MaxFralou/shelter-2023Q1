@@ -345,6 +345,10 @@ body {
     z-index: 9999;
 }
 
+.button-close:hover{
+    scale: 1.1;
+  }
+
 .container-our-friends {
     max-width: 1280px;
     min-height: 85.5em;
