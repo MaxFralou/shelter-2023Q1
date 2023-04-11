@@ -408,6 +408,7 @@ function overPetCards() {
       } else {
         updateDataPet(index);
         visiblePopUp()
+
       }
     });
   });
@@ -447,102 +448,158 @@ if (window.innerWidth === 320 && document.title === "Cozy House -Pets") {
   popUp.style.top = '40em'
 }
 
-console.log(`Привет! Спасибо за проверку и извини что все кривовато :(
-  
-моя автопроверка:
-  
-Ваша оценка - 69 баллов
+// PAGINATION
 
-Отзыв по пунктам ТЗ:
+let subCore1 = []
+let subCore2 = []
+let subCore3 = []
+function randomPagination() {
+  let paginationCoreRandom = generateArray(8)
+  subCore1 = paginationCoreRandom.slice(0, 3)
+  subCore2 = paginationCoreRandom.slice(3, 6)
+  subCore3 = paginationCoreRandom.slice(6)
+  console.log(paginationCoreRandom)
+}
+randomPagination()
 
-Не выполненные/не засчитанные пункты:
 
-1) при изменении ширины экрана (от 1280px до 320px и обратно), слайдер перестраивается и работает без перезагрузки страницы (набор карточек при этом может как изменяться, так и оставаться тем же, скрывая лишнюю или добавляя недостающую, и сохраняя при этом описанные для слайдера требования) 
+let finalPetPagination = []
 
-2) при нажатии кнопок '>' или '<' открывается следующая или предыдущая страница пагинации соответственно 
+function create48Arr() {
+  let petsCardPagination48 = []
+  let sortSubCore1 = subCore1.sort(() => Math.random() - 0.5)
+  let sortSubCore2 = subCore2.sort(() => Math.random() - 0.5)
+  let sortSubCore3 = subCore3.sort(() => Math.random() - 0.5)
+  return petsCardPagination48.concat(sortSubCore1, sortSubCore2, sortSubCore3)
+}
 
-3) при нажатии кнопок '>>' или '<<' открывается последняя или первая страница пагинации соответственно 
+for (let i = 0; i < 6; i++) {
+  let arr = create48Arr();
+  finalPetPagination = finalPetPagination.concat(arr);
+}
+console.log(finalPetPagination)
 
-4) при открытии первой страницы кнопки '<<' и '<' неактивны 
+const paginationCards = document.querySelector('.our-friends-cards')
 
-5) при открытии последней страницы кнопки '>' и '>>' неактивны 
 
-6) в кружке по центру указан номер текущей страницы. При переключении страниц номер меняется на актуальный 
+// Определяем начальные значения для количества страниц и карточек на странице
+let totalPages = 6;
+let cardsPerPage = 8;
+const screenWidth = window.innerWidth;
 
-7) при загрузке страницы формируется массив из 48 объектов питомцев. Каждый из 8 питомцев должен встречаться ровно 6 раз 
+if (screenWidth >= 1280) {
+  totalPages = 6;
+  cardsPerPage = 8;
+} else if (screenWidth >= 768) {
+  totalPages = 8;
+  cardsPerPage = 6;
+} else if (screenWidth < 767) {
+  totalPages = 16;
+  cardsPerPage = 3;
+}
 
-8) при каждой перезагрузке страницы формируется новый массив со случайной последовательностью 
+// Определяем текущую страницу
+let currentPage = 1;
+const forwardBtn = document.querySelector('.forward')
+const currCount = document.querySelector('.cur')
+if (currCount !== null) { currCount.textContent = currentPage }
+if (forwardBtn !== null) forwardBtn.addEventListener('click', () => {
+  if (cardsPerPage === 8) {
+    if (currentPage < 6) {
+      currentPage++
+      currCount.textContent = currentPage
+    }
+  } else if (cardsPerPage === 6) {
+    if (currentPage < 8) {
+      currentPage++
+      currCount.textContent = currentPage
+    }
+  } else if (cardsPerPage === 3) {
+    if (currentPage < 16) {
+      currentPage++
+      currCount.textContent = currentPage
+    }
+  }
+  renderCards()
+})
 
-9) карточки питомцев не должны повторяться на одной странице 
+const backBtn = document.querySelector('.back')
+if (backBtn !== null) backBtn.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--
+    currCount.textContent = currentPage
+  }
+  renderCards()
+})
 
-10) при переключении страницы данные меняются (для >1280px меняется порядок карточек, для остальных - меняется набор и порядок карточек) 
+const fastForwardBtn = document.querySelector('.fast-forward')
+if (fastForwardBtn !== null) fastForwardBtn.addEventListener('click', () => {
+  currentPage = totalPages
+  currCount.textContent = currentPage
+  renderCards()
+})
 
-11) при неизменных размерах области пагинации, в том числе размерах окна браузера, и без перезагрузки страницы, возвращаясь на страницу под определенным номером, контент на ней всегда будет одинаков. Т.е. карточки питомцев будут в том же расположении, что и были до перехода на другие страницы 
+const fastBackBtn = document.querySelector('.fast-back')
+if (fastBackBtn !== null) fastBackBtn.addEventListener('click', () => {
+  currentPage = 1
+  currCount.textContent = currentPage
+  renderCards()
+})
 
-12) общее количество страниц при ширине экрана 1280px - 6, при 768px - 8, при 320px - 16 страниц 
 
-13) при изменении ширины экрана (от 1280px до 320px и обратно), пагинация перестраивается и работает без перезагрузки страницы (страница может оставаться той же или переключаться, при этом сформированный массив - общая последовательность карточек - не обновляется, сохраняются все остальные требования к пагинации) 
+window.addEventListener('resize', () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1280) {
+    totalPages = 6;
+    cardsPerPage = 8;
+  } else if (screenWidth >= 768) {
+    totalPages = 8;
+    cardsPerPage = 6;
+  } else if (screenWidth < 767) {
+    totalPages = 16;
+    cardsPerPage = 3;
+  }
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
 
-14) при открытии попапа вертикальный скролл страницы становится неактивным, при закрытии - снова активным 
+  renderCards();
 
-Частично выполненные пункты:
+});
 
-1) при нажатии на область вокруг попапа или на кнопку с крестиком попап закрывается, при этом при нажатии на сам попап ничего не происходит 
 
-Отзыв: Работает только крестик
 
-Выполненные пункты:
+function renderCards() {
 
-1) при ширине страницы меньше 768рх панель навигации скрывается, появляется бургер-иконка 
+  if (currCount !== null) currCount.textContent = currentPage
+  let startIndex;
+  if (currentPage < 1) {
+    startIndex = 0;
+  } else {
+    startIndex = (currentPage - 1) * cardsPerPage;
+  }
+  let endIndex = (currentPage * cardsPerPage) - 1
 
-2) при нажатии на бургер-иконку, справа плавно появляется адаптивное меню шириной 320px, бургер-иконка плавно поворачивается на 90 градусов 
+  if (paginationCards !== null) paginationCards.innerHTML = ''
 
-3) высота адаптивного меню занимает всю высоту экрана 
+  let cardsHtml = '';
 
-4) при повторном нажатии на бургер-иконку или на свободное от бургер-меню пространство адаптивное меню плавно скрывается уезжая за правую часть экрана, бургер-иконка плавно поворачивается на 90 градусов обратно 
+  for (let i = startIndex; i <= endIndex; i++) {
+    cardsHtml += `
+   <figure class="pets-card pop-up-pets p${i + 1}">
+      <img src="${data[finalPetPagination[i]].img}" alt="pet-pic" class="pet-pic">
+        <figcaption>
+          <h3 class="pet-name">${data[finalPetPagination[i]].name}</h3>
+          <button class="button-friends button">Learn more</button>
+        </figcaption>
+     </figure>`;
+  }
 
-5) бургер-иконка создана при помощи html+css, без использования изображений 
+  if (paginationCards !== null) paginationCards.insertAdjacentHTML('afterbegin', cardsHtml)
 
-6) ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям, сохраняются заданные на первом этапе выполнения задания требования интерактивности элементов меню 
+}
 
-7) при клике по любой ссылке (интерактивной или неинтерактивной) в меню адаптивное меню плавно скрывается вправо, бургер-иконка поворачивается на 90 градусов обратно 
-
-8) расположение и размеры элементов в бургер-меню соответствует макету (центрирование по вертикали и горизонтали элементов меню, расположение иконки). При этом на странице Pets цветовая схема может быть как темная, так и светлая 
-
-9) область, свободная от бургер-меню, затемняется 
-
-10) страница под бургер-меню не прокручивается 
-
-11) при нажатии на стрелки происходит переход к новому блоку элементов 
-
-12) смена блоков происходит с соответствующей анимацией карусели (способ выполнения анимации не проверяется) 
-
-13) слайдер бесконечен, т.е. можно бесконечно много нажимать влево или вправо, и каждый раз будет прокрутка в эту сторону с новым набором карточек 
-
-14) при переключении влево или вправо прокручивается ровно столько карточек, сколько показывается при текущей ширине экрана (3 для 1280px, 2 для 768px, 1 для 320px) 
-
-Отзыв: Необходимо делать перезагрузку страницы на брейкпоинтах
-
-15) в текущем блоке слайда карточки с питомцами не повторяются 
-
-16) в следующем блоке нет дублирования карточек с текущим блоком. Например в слайдере из 3 элементов, следующий выезжающий слайд будет содержать 3 (из 8 доступных) новых карточки питомца, таких, каких не было среди 3х карточек на предыдущем уехавшем слайде 
-
-17) сохраняется только одно предыдущее состояние. Т.е. при последовательном переходе два раза влево, а потом два раза вправо, мы получим набор карточек, отличный от исходного 
-
-18) при каждой перезагрузке страницы формируется новая последовательность карточек 
-
-19) генерация наборов карточек происходит на основе 8 объектов с данными о животными 
-
-20) при перезагрузке страницы всегда открывается первая страница пагинации 
-
-21) попап появляется при нажатии на любое место карточки с описанием конкретного животного 
-
-22) часть страницы вне попапа затемняется 
-
-23) кнопка с крестиком интерактивная 
-
-24) окно попапа (не считая кнопку с крестиком) центрировано по всем осям, размеры элементов попапа и их расположение совпадают с макетом`)
-
+renderCards();
 
 
 

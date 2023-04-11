@@ -377,8 +377,8 @@ body {
 .our-friends-cards {
     display: grid;
     grid-template-areas:
-        "p1 p2 p3 p4"
-        "p5 p6 p7 p8";
+    "card card card card"
+    "card card card card";
     grid-template-columns: repeat(4, 17.2em);
     margin-top: 42px;
     column-gap: 35px;
@@ -387,7 +387,9 @@ body {
     justify-content: end;
 }
 
-.p1 {
+
+
+/* .p1 {
     grid-area: p1;
     padding-right: 1px;
 }
@@ -418,8 +420,10 @@ body {
 
 .p8 {
     grid-area: p8;
-}
-
+} */
+.our-friends-cards .pets-card {
+    grid-area: auto;
+  }
 .pets-card {
     margin: 0 0 0 0;
     width: 17em;
@@ -514,9 +518,18 @@ body {
 
 .cur {
     background: #F1CDB3;
-    background-image: url('./assets/svg/number.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+padding-left: 1.9%;
+padding-bottom: 0.2%;
+color: #292929;
 }
 
 .forward {
@@ -684,13 +697,13 @@ body {
 
 /* MEDIA */
 
-@media all and (max-width: 1250px) {
+@media all and (max-width: 1279px) {
     .our-friends-cards {
         grid-template-areas:
-            "p1 p2"
-            "p3 p4"
-            "p5 p6"
-            "p7 p8";
+            "card card"
+            "card card"
+            "card card"
+            "card card";
         grid-template-columns: repeat(2, 17.2em);
         justify-items: center;
         justify-content: center;
@@ -761,20 +774,20 @@ body {
 
     .our-friends-cards {
         grid-template-areas:
-            "p1 p2"
-            "p3 p4"
-            "p5 p6";
+            "card card"
+            "card card"
+            "card card";
         margin-top: 14px;
         row-gap: 27px;
     }
 
-    .p7 {
+    /* .p7 {
         display: none;
     }
 
     .p8 {
         display: none;
-    }
+    } */
 
     .navigation {
         margin-top: 35px;
@@ -891,7 +904,7 @@ body {
     }
 }
 
-@media all and (max-width: 604px) {
+@media all and (max-width: 766px) {
 
     .our-friends-title {
         padding-bottom: 132px;
@@ -899,13 +912,13 @@ body {
 
     .our-friends-cards {
         grid-template-areas:
-            "p1"
-            "p2"
-            "p3";
+            "card"
+            "card"
+            "card";
         grid-template-columns: repeat(1, 17.2em);
     }
 
-    .p4 {
+    /* .p4 {
         display: none;
     }
 
@@ -915,7 +928,7 @@ body {
 
     .p6 {
         display: none;
-    }
+    } */
 
     .navigation-button {
         margin-left: 3px;
