@@ -74,7 +74,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(41, 41, 41, 0.6);
-  /* backdrop-filter: blur(10px);  */
   z-index: 1;
   opacity: 0;
   pointer-events: none;
@@ -93,7 +92,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(41, 41, 41, 0.6);
-  /* backdrop-filter: blur(10px); */
   z-index: 2;
   opacity: 0;
   pointer-events: none;
@@ -709,7 +707,6 @@ body {
   padding-right: 3%;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 
 .help-title {
